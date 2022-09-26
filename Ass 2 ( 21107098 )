@@ -1,0 +1,57 @@
+Q 1) While traversing a single-circular linked list, which condition 
+establishes that the traversing element/variable has reached the first 
+element?
+
+Answer :
+The most basic element which differentiates a circular linked 
+list from a normal one is its ability to repeat form a loop . The last 
+node part holds the address to the first node of the list. Hence the 
+most basic need is to complete the circle .
+So , While traversing a single circular linked list , the last element 
+of the list must be pointed towards the first element.It should 
+contain the address of the first node so that the loop can be 
+repeated in a circular manner.
+In C++ , A most basic code of circular linked list is as follow:
+/* Function to print nodes in a given Circular linked list */
+void printList(Node* head)
+{
+ Node* temp = head;
+ // If linked list is not empty
+ if (head != NULL) {
+ // Print nodes till we reach first node again
+ do {
+ cout << temp->data << " ";
+ temp = temp->next;
+ } while (temp != head);
+ }
+}
+
+
+Q 2) What are the practical applications of a circular linked 
+list? 
+Answer :
+Circular Linked lists are just a part of linked lists 
+which are circular in nature . These just complicates 
+their working a little because we can insert data 
+anywhere in the list unlike Array data structures
+.Hence it has a wide range of uses Some of its real 
+life applications are:
+1) Our Personal computers (PCs) utilize circular 
+linked lists , where all the running applications are 
+kept in a circular linked list.
+2) Many multiplayer games use Circular linked lists 
+to store data of players and the pointer keeps 
+moving forward till the players chance ends
+(Swapping of players)
+3) These can also be used to create circular Queue.
+4) Circular lists are used when the entire list is 
+accessed one-by one in the loop
+5) Implementation of Advanced Data Structures like 
+Fibonacci Heap.
+6) The browser cache which allows us to press BACK 
+button
+7) Undo functionality in Photoshop or Word
+8) Circular linked lists are used in Round Robin 
+scheduling .
+9) Circular Linked lists are also used in Audio as well 
+as Video Streaming
